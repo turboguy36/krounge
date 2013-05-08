@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical" >
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </TabWidget>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:background="@color/tabsBG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+<!-- 
+            <LinearLayout
+                android:id="@+id/opt_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/tabsBG"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/opt_klounge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/tabsBG"
+		android:orientation="vertical"
+		android:padding="5dp" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/opt_myhome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/tabsBG"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/opt_more"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/tabsBG">
+            </RelativeLayout>
+-->
+        </FrameLayout>
+    </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

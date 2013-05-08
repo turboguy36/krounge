@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="kr.co.ktech.cse"
+    android:versionCode="15"
+    android:versionName="1.86" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/customTheme" >
+        <service android:name="kr.co.ktech.cse.GCMIntentService" />
+
+        <activity
+            android:name="kr.co.ktech.cse.activity.LoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="kr.co.ktech.cse.activity.ReplyActivity"
+            android:label="reply" />
+        <activity
+            android:name="kr.co.ktech.cse.activity.KLoungeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="kr.co.ktech.cse.activity.KLoungeMsg"
+            android:label="@string/title_activity_klounge_msg" />
+        <activity
+            android:name="kr.co.ktech.cse.activity.SplashActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_splash"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name="kr.co.ktech.cse.activity.KLoungeGroupList"
+            android:label="@string/title_activity_group_list" />
+        <activity
+            android:name="kr.co.ktech.cse.activity.KLoungeGroupMember"
+            android:label="@string/title_activity_klounge_group_member" />
+        <activity
+            android:name="kr.co.ktech.cse.activity.WriteMessage"
+            android:label="@string/title_activity_wirte_message"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+           
+        </activity>
+        <activity
+            android:name="kr.co.ktech.cse.activity.MyLounge"
+            android:label="@string/title_activity_my_lounge" >
+        </activity>
+        <activity
+            android:name="kr.co.ktech.cse.activity.PersonalLounge"
+            android:label="@string/title_activity_personal_lounge" >
+        </activity>
+        <activity
+            android:name="kr.co.ktech.cse.adapter.MoveImageView"
+            android:label="@string/title_move_img" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>            -->
+        </activity>
+        <activity
+            android:name="kr.co.ktech.cse.activity.DialogActivity"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity android:name="kr.co.ktech.cse.activity.MoreTab" >
+        </activity>
+        <activity
+            android:name="kr.co.ktech.cse.activity.AttachedDownloadManager"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="kr.co.ktech.cse.activity.TouchImageViewActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <!--
+                 투명 / 불투명 화면을 만들고 싶다면 
+            	android:theme="@style/Theme.Transparent            -->
+        </activity>
+        <activity
+            android:name="kr.co.ktech.cse.activity.TouchUserImageViewActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <!--
+                 투명 / 불투명 화면을 만들고 싶다면 
+            	android:theme="@style/Theme.Transparent            -->
+        </activity>
+        
+        <activity
+            android:name="kr.co.ktech.cse.bitmapfun.ui.ImageGridActivity"
+            android:label="Grid Activity">
+            
+        </activity>
+	<activity
+	    android:name="kr.co.ktech.cse.ImageDetailActivity"
+	    android:parentActivityName="kr.co.ktech.cse.cse.bitmapfun.ui.ImageGridActivity"
+	    android:theme="@style/AppTheme.FullScreen">
+	    <meta-data 
+	        android:name="android.support.PARENT_ACTIVITY"
+	        android:value="kr.co.ktech.cse.bitmapfun.ui.ImageGridActivity"/>
+	</activity>
+        <service
+            android:name="kr.co.ktech.cse.activity.Service"
+            android:label="Network" >
+            <intent-filter>
+                <action android:name="kr.co.ktech.cse.activity.Service" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

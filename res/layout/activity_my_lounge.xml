@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mylounge_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp" 
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/myLounge_topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Spinner
+            android:id="@+id/mylounge_group_list_spinner"
+             android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:paddingLeft="5dip"
+    		android:layout_weight="0.7" />
+
+        <Button
+            android:id="@+id/btn_send_my_message"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:layout_height="40dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_send"
+            android:text="@string/send_message" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/mylounge_msg_scrollview"
+        
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/layout_mylounge_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
